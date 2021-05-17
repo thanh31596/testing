@@ -13,9 +13,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build && copy missions/public/index.html dist/index.html",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku": "npm run build && copy missions/public/index.html dist/index.html"
   }
 }
