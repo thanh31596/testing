@@ -1,0 +1,25 @@
+const express = require("express");
+const router = express.Router();
+const mysql = require("mysql");
+
+var connection = mysql.createConnection({
+  host: "localhost",
+  user: "GoExpAdmin",
+  password: "password",
+});
+
+connection.query("USE new_schema");
+
+connection.query(
+  "INSERT INTO missions (mission_title, description, categoryID, vendorID, Price, feedback_id, activity_time, voucher_id, location, inventory_id, created_at, modified_at, deleted_at, badge_id, picture, legal_info, key_info, Map) VALUES ('Paint & Sip with Wesley Taylor Art Studios', 'Customers can enjoy a Tuesday night paint and sip session with all art equipment provided; food and drinks are available at the bar. Enjoy a paint and sip session with up to seven friends.  All art equipment is provided, and a range of food and drinks are available at the bar.', '1', '1', '25.00', '1', 'time', '2', 'Palace Cinema Barracks, 61 Petrie Terrace', '1', '2000-05-10', '2006-03-01', '2020-10-04', '1', 'picture3', 'legal info', 'key info', 'map');"
+);
+
+connection.end();
+
+/////////////EXAMPLE/////////////////////
+Kelly 7/5/21
+
+"INSERT INTO missions (mission_title, description, categoryID, vendorID, Price, feedback_id, activity_time, voucher_id, location, inventory_id, created_at, modified_at, deleted_at, badge_id, picture, legal_info, key_info, Map) VALUES ('Paint & Sip with Wesley Taylor Art Studios', 'Customers can enjoy a Tuesday night paint and sip session with all art equipment provided; food and drinks are available at the bar. Enjoy a paint and sip session with up to seven friends.  All art equipment is provided, and a range of food and drinks are available at the bar.', '1', '1', '25.00', '1', 'time', '2', 'Palace Cinema Barracks, 61 Petrie Terrace', '1', '2000-05-10', '2006-03-01', '2020-10-04', '1', 'picture3', 'legal info', 'key info', 'map');"
+
+Charles, Lisa
+///////////END EXAMPLE//////////////////////
